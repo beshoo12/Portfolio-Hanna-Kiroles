@@ -69,6 +69,7 @@ window.addEventListener('load', function () {
         if (delay && delay.includes('delay')) {
             htmlEl.style.animationDelay = "".concat(parseFloat(delay.split('-')[1]) * 0.15, "s");
         }
+    
         htmlEl.style.opacity = '1';
     });
 });
