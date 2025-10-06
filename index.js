@@ -61,30 +61,3 @@ var openWhatsApp = function () {
     var phone = '96565851296'; // الرقم الصحيح
     window.open("https://wa.me/".concat(phone), '_blank');
 };
-// ===== Animation on Load =====
-window.addEventListener('load', function () {
-    document.querySelectorAll('[data-anim]').forEach(function (el) {
-        var htmlEl = el;
-        var delay = htmlEl.getAttribute('data-anim');
-        if (delay && delay.includes('delay')) {
-            htmlEl.style.animationDelay = "".concat(parseFloat(delay.split('-')[1]) * 0.15, "s");
-        }
-    
-        htmlEl.style.opacity = '1';
-    });
-});
-// ===== Navbar Hamburger Toggle =====
-var hamburger = document.getElementById('hamburger');
-var navLinks = document.getElementById('nav-links');
-if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function () {
-        navLinks.classList.toggle('show');
-    });
-    var links = navLinks.querySelectorAll('a');
-    links.forEach(function (link) {
-        link.addEventListener('click', function () {
-            navLinks.classList.remove('show');
-        });
-    });
-}
-
