@@ -3,14 +3,6 @@ var yearElement = document.getElementById('year');
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear().toString();
 }
-// ===== Dark Mode Toggle =====
-var darkToggle = document.getElementById('darkToggle');
-if (darkToggle) {
-    darkToggle.addEventListener('click', function () {
-        document.body.classList.toggle('dark');
-        darkToggle.textContent = document.body.classList.contains('dark') ? '☀' : '🌙';
-    });
-}
 // ===== Lightbox للشهادات =====
 var openLightbox = function (src) {
     var box = document.getElementById('lightbox');
